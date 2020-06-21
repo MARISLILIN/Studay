@@ -16,15 +16,18 @@ class Ticket extends Thread {
     @Override
     public void run() {
         while (true) {
-            if (ticket == 0) {
-                break;
+          synchronized (Ticket.class) {
+            if (ticket <= 0) {
+              break;
             }
             try {
-                Thread.sleep(10);
+              Thread.sleep(10);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+              e.printStackTrace();
             }
-            System.out.println(getName() + "...这是第" + ticket-- +"号票");
+            System.out.println(getName() + "...这是第" + ticket-- + "号票");
+         }
         }
+
     }
 }
