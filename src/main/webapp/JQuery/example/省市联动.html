@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+
+        var provinces = [
+            ["深圳市","广州市","汕头市"],
+            ["武汉市","黄冈市","荆州市"],
+            ["长沙市","常德市","岳阳市"]
+        ];
+
+        $(function () {
+            $("#province").change(function () {
+                // alert(this.value);
+                //得到城市信息
+                var cities = provinces[this.value];
+                //清空城市select中的option
+                /*var $city = $("#city");
+                //将JQ对象转成JS对象
+                var citySelect = $city.get(0);
+                citySelect.options.length = 0;*/
+
+                $("#city").empty();//采用JQ的方式清空
+                //遍历城市数据
+                $(cities).each(function (i, n) {
+                    $("#city").append("<option>" + n + "</option>");
+                });
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <select id="province">
+        <option value="-1">---请选择---</option>
+        <option value="0">广东省</option>
+        <option value="1">湖北省</option>
+        <option value="2">湖南省</option>
+    </select>
+    <select id="city"></select>
+</body>
+</html>

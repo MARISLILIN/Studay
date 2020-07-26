@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/laohuangli.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+        $(function () {
+            //请求连接，动态显示数据
+
+            var url = "../data.json";
+            //ajax  最简单的异步请求网络
+            $.get(url, function (data) {
+                // console.log(data);
+
+                // var datum = data[4];
+
+                var goodCount = Math.floor(Math.random() * 3 + 3);
+                while (goodCount > 0) {
+                    var index = Math.floor(Math.random() * data.length);
+                    var obj = data[index];
+
+                    $(".good ul").append("<li>" +
+                        "<div class='name'>" + obj.name +"</div>" +
+                        "<div class='description'> "+ obj.good +"</div>" +
+                        "</li>");
+
+                    goodCount--;
+                }
+
+                var badCount = Math.floor(Math.random() * 3 + 2);
+                while (badCount > 0) {
+                    var index = Math.floor(Math.random() * data.length);
+                    var obj = data[index];
+
+                    $(".bad ul").append("<li>" +
+                        "<div class='name'>" + obj.name +"</div>" +
+                        "<div class='description'> "+ obj.bad +"</div>" +
+                        "</li>");
+
+                    badCount--;
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            程序员老黄历
+        </div>
+        <div class="good">
+            <div class="title">
+                <table>
+                    <tr><td>宜</td></tr>
+                </table>
+            </div>
+            <div class="content">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="split"></div>
+
+        <div class="bad">
+            <div class="title">
+                <table>
+                    <tr><td>不宜</td></tr>
+                </table>
+            </div>
+            <div class="content">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>

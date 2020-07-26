@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+        var cities = ["深圳市","广州市","汕头市"];
+
+        //JQ对象遍历
+        // $(cities).each(function (i,n) {
+        //     console.log(i+"===="+n);
+        // });
+        //
+        // //JQ函数调用
+        // $.each(cities, function (i, n) {
+        //     console.log(i+">>>>"+n);
+        // });
+
+        function aaa(i ,n) {
+            console.log(i+">>>>"+n);
+        }
+        // $.each(cities, aaa);
+
+
+        function callback1(i, n) {
+            console.log("123 :" + i + "/" + n);
+        }
+
+        function bianli(arr, callback1) {
+            for (var i = 0; i < arr.length; i++) {
+                var item = arr[i];
+                callback1(i, item);
+            }
+        }
+
+        bianli(cities,callback1);
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

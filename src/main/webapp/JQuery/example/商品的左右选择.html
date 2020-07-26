@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+
+        $(function () {
+            $("#a1").click(function () {
+                $("#rightSelect").append($("#leftSelect option:selected"));
+            });
+
+            $("#a2").click(function () {
+                $("#rightSelect").append($("#leftSelect option"));
+            });
+
+        });
+
+
+
+    </script>
+
+
+</head>
+<body>
+<table border="1px" width="400px">
+    <tr>
+        <td>分类名称</td>
+        <td>
+            <input type="text" value="手机数码">
+        </td>
+    </tr>
+    <tr>
+        <td>分类描述</td>
+        <td>
+            <input type="text" value="这里面都是手机数码">
+        </td>
+    </tr>
+    <tr>
+        <td>分类商品</td>
+        <td>
+            <!--                左边-->
+            <div style="float: left">
+                已有商品<br/>
+                <select multiple="multiple" id="leftSelect" style="width: 100%">
+                    <option>华为</option>
+                    <option>小米</option>
+                    <option>锤子</option>
+                    <option>一加</option>
+                </select><br/>
+
+                <a href="#" id="a1"> &gt;&gt; </a> <br/>
+                <a href="#" id="a2"> &gt;&gt;&gt; </a> <br/>
+
+            </div>
+            <!--                右边-->
+            <div style="float: right">
+                未有商品<br/>
+                <select multiple="multiple" id="rightSelect" style="width: 100%">
+                    <option>iphone6</option>
+                    <option>iphone6s</option>
+                    <option>iphone6splus</option>
+                    <option>iphone7s</option>
+                </select><br/>
+
+                <a href="#"> &lt;&lt; </a> <br/>
+                <a href="#"> &lt;&lt;&lt; </a> <br/>
+
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="提交">
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

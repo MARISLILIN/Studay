@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                // $("#div1").append("<font color='red' size='4'>添加后的内容<br/></font>");
+                $("#div1").prepend("<font color='red' size='4'>添加后的内容<br/></font>");
+                // $("<font color='red' size='4'>添加后的内容<br/></font>").appendTo("#div1");
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <input type="button" id="btn1" value="添加" /><br/>
+
+    <div id="div1">
+        添加内容
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var provinces = [
+            ["深圳市","广州市","汕头市"],
+            ["武汉市","黄冈市","荆州市"],
+            ["长沙市","常德市","岳阳市"]
+        ];
+
+        function selectProvince() {
+            var province = document.getElementById("province");
+
+            var value = province.value;
+
+            var cities = provinces[value]
+
+            var citySelect = document.getElementById("city");
+            citySelect.options.length = 0;
+            for (let citiesKey in cities) {
+                var cityText = cities[citiesKey];
+
+                var option1 = document.createElement("option");
+                var textNode = document.createTextNode(cityText);
+                option1.appendChild(textNode);
+
+                citySelect.appendChild(option1);
+            }
+
+
+        }
+    </script>
+
+
+</head>
+<body>
+    <select onchange="selectProvince()" id="province">
+        <option value="-1">---请选择---</option>
+        <option value="0">广东省</option>
+        <option value="1">湖北省</option>
+        <option value="2">湖南省</option>
+    </select>
+    <select id="city"></select>
+</body>
+</html>

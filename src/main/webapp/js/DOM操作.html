@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function dianwo() {
+            var div = document.getElementById("div1");
+
+            var p = document.createElement("p");
+            var textNode = document.createTextNode("文本内容");
+
+            p.appendChild(textNode);
+
+            div.appendChild(p);
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <input type="button" value="点我，添加P" onclick="dianwo()" />
+    <div id="div1">
+
+    </div>
+</body>
+</html>

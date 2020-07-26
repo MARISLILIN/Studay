@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        function showTips(spanID, msg) {
+            var span = document.getElementById(spanID);
+            span.innerHTML = msg;
+        }
+
+        function checkUsername() {
+            var uValue = document.getElementById("username").value;
+            var span = document.getElementById("span_username");
+
+            if (uValue.length < 6) {
+                span.innerHTML = "<font color='red' size='2'>对不起用户名太短</font>";
+            } else {
+                span.innerHTML = "<font color='green' size='2'>可使用的用户名</font>";
+            }
+        }
+
+        function checkPassword() {
+            var uValue = document.getElementById("password").value;
+            var span = document.getElementById("span_password");
+
+            if (uValue.length < 6) {
+                span.innerHTML = "<font color='red' size='2'>对不起密码太短</font>";
+            } else {
+                span.innerHTML = "<font color='green' size='2'>可使用的密码</font>";
+            }
+        }
+
+        function checkRePassword() {
+            var uPass = document.getElementById("password").value;
+            var uRePass = document.getElementById("repassword").value;
+            var span = document.getElementById("span_repassword");
+
+            if (uPass != uRePass) {
+                span.innerHTML = "<font color='red' size='2'>对不起两次密码不一致</font>";
+            } else {
+                span.innerHTML = "";
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <form action="../html/index.html">
+        用户名:<input type="text" id="username" onfocus="showTips('span_username', '<font color=\'red\' size=\'2\'>用户名长度不能小于6</font>')" onblur="checkUsername()" onkeyup="checkUsername()" /><span id="span_username"></span><br />
+        密码:<input type="password" id="password" onfocus="showTips('span_password', '<font color=\'red\' size=\'2\'>密码名长度不能小于6</font>')" onblur="checkPassword()" onkeyup="checkPassword()" /><span id="span_password"></span><br />
+        确认密码:<input type="password" id="repassword"onfocus="showTips('span_repassword', '<font color=\'red\' size=\'2\'>两次密码必须一致</font>')" onblur="checkRePassword()" onkeyup="checkRePassword()" /><span id="span_repassword"></span><br />
+        邮箱:<input type="email" id="email" /><br />
+        手机号:<input type="tel" id="text" /><br />
+
+
+        <input type="submit" name="提交">
+    </form>
+</body>
+</html>

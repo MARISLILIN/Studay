@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <script>
+        $(function () {
+
+            $("#btn2").click(function () {
+                // $("#img1").hide("slow");
+                // $("#img1").slideUp("slow");
+                // $("#img1").fadeOut("slow");
+                $("#img1").animate({width:"50px", opacity:"0.2"},1000);
+            });
+            $("#btn1").click(function () {
+                //$("#img1").show("slow");
+
+                // $("#img1").slideDown("slow");
+                // $("#img1").fadeIn("slow");
+                $("#img1").animate({width:"100px", opacity:"1"},1000);
+            });
+
+
+        });
+    </script>
+
+</head>
+<body>
+    <input type="button" value="显示" id="btn1" />
+    <input type="button" value="隐藏" id="btn2" /><br/>
+    <img src="../img/z_1_attack_01.png" id="img1" width="100px" />
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
+        <script>
+            $(function () {
+                $(".bixuan").after("<font class='high'>*</font>");
+
+                $(".bixuan").blur(function () {
+                    // var value = this.value;
+                    var val = $(this).val();
+
+                    // $(".formtips").remove();
+                    $(this).parent().find(".formtips").remove();
+
+
+                    if ($(this).is("#username")) {
+                        if (val.length < 6) {
+                            $(this).parent().append("<span class='formtips onError'>用户名太短了</span>");
+                        } else {
+                            $(this).parent().append("<span class='formtips onSuccess'>用户名可以使用</span>");
+                        }
+                    }
+                    if ($(this).is("#password")) {
+                        if (val.length < 3) {
+                            $(this).parent().append("<span class='formtips onError'>密码太短了</span>");
+                        } else {
+                            $(this).parent().append("<span class='formtips onSuccess'>密码可以使用</span>");
+                        }
+                    }
+
+
+
+
+                }).focus(function () {
+                    $(this).triggerHandler("blur");
+                }).keyup(function () {
+                    $(this).triggerHandler("blur");
+                });
+
+                $("form").submit(function () {
+                    $(".bixuan").trigger("focus");
+
+                    var length = $(".onError").length;
+                    if (length > 0) {
+                        return false;
+                    }
+
+                    return true;
+                });
+
+
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <form action="省市联动.html" >
+            <div>
+                用户名：<input type="text" class="bixuan" id="username"/>
+            </div>
+            <div>
+                密码：<input type="password" class="bixuan" id="password"/>
+            </div>
+            <div>
+                手机号：<input type="tel"/>
+            </div>
+
+            <div>
+                <input type="submit" value="注册">
+            </div>
+
+        </form>
+    </body>
+</html>

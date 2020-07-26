@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+        $(function () {
+            // $("a[href]").css("color", "red");
+            // $("a[href][title]").css("color", "red");
+            $("a[href][title='testTitle']").css("color", "red");
+        });
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <a href="#">href111</a><br/>
+    <a href="#" title="1">href222</a><br/>
+    <a href="#" title="testTitle">href333</a>
+</body>
+</html>

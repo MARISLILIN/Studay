@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+
+        function showImg() {
+            $("#img1").show();
+
+            setTimeout("hideImg()",3000);
+
+        }
+
+        function hideImg() {
+            $("#img1").hide();
+
+
+        }
+
+        $(function () {
+            setTimeout("showImg()",3000);
+
+        });
+
+
+    </script>
+
+
+
+</head>
+<body>
+    <img src="../img/z_1_die_01.png" id="img1" width="100%" style="display: none" />
+</body>
+</html>

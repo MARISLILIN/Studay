@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function showTips(spanID, msg) {
+            var span = document.getElementById(spanID);
+            span.innerHTML = msg;
+        }
+
+        function checkUsername() {
+            var uValue = document.getElementById("username").value;
+            var span = document.getElementById("span_username");
+
+            if (uValue.length < 6) {
+                span.innerHTML = "<font color='red' size='2'>对不起用户名太短</font>";
+                return false;
+            } else {
+                span.innerHTML = "<font color='green' size='2'>可使用的用户名</font>";
+                return true;
+            }
+        }
+
+        function checkForm() {
+            var flag = checkUsername();
+            return flag;
+        }
+
+    </script>
+
+</head>
+<body>
+    <form action="../html/index.html" onsubmit="return checkForm()">
+        用户名：<input type="text" id="username" onblur="checkUsername()" onkeyup="checkUsername()" onfocus="showTips('span_username','用户名长度不能小于6位')" /><span id="span_username"></span><br/>
+        <input type="submit" value="注册">
+    </form>
+</body>
+</html>

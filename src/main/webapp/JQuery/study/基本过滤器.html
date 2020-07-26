@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("div:first").css("background-color", "palegreen");
+            });
+            $("#btn2").click(function () {
+                $("div:even").css("background-color", "palegreen");
+            });
+            $("#btn3").click(function () {
+                $("div:odd").css("background-color", "palegreen");
+            });
+            $("#btn4").click(function () {
+                $("div:gt(2)").css("background-color", "palegreen");
+            });
+
+        });
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <input type="button" value="过滤出所有div中的第一个元素" id="btn1" />
+    <input type="button" value="过滤出所有div中偶数位的div" id="btn2" />
+    <input type="button" value="过滤出所有div中奇数位的div" id="btn3" />
+    <input type="button" value="过滤出所有div中索引大于2" id="btn4" />
+    <br/>
+    <div id="one">
+        <div class="mini">
+            1-1
+        </div>
+    </div>
+    <div id="two">
+        <div class="mini">2-1</div>
+        <div class="mini">2-2</div>
+    </div>
+    <div id="three">
+        <div class="mini">3-1</div>
+        <div class="mini">3-2</div>
+        <div class="mini">3-3</div>
+    </div>
+    <span id="four">span</span>
+
+</body>
+</html>

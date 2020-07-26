@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        function init() {
+            var tab = document.getElementById("tab");
+            var rows = tab.rows;
+            for (let rowsKey in rows) {
+                var row = rows[rowsKey];
+
+                if (rowsKey == 0) {
+
+                } else if (rowsKey % 2 == 0) {
+                    row.bgColor = "yellow";
+                } else {
+                    row.bgColor = "red";
+                }
+            }
+        }
+
+        /*全选、全不选*/
+        function checkAll() {
+            var check1 = document.getElementById("check1");
+            var checked = check1.checked;
+            // var checks = document.getElementsByTagName("input");
+            var checks = document.getElementsByName("checkone");
+
+            for (var i = 0; i < checks.length; i++) {
+                var checkone = checks[i];
+
+                checkone.checked = checked;
+            }
+        }
+
+
+    </script>
+
+
+</head>
+<body onload="init()">
+    <table border="1px" width="600px" id="tab">
+        <tr>
+            <td>
+                <input type="checkbox" onclick="checkAll()" id="check1" />
+            </td>
+            <td>分类ID</td>
+            <td>分类名称</td>
+            <td>分类商品</td>
+            <td>分类描述</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="checkone" />
+            </td>
+            <td>1</td>
+            <td>手机数码</td>
+            <td>华为、小米</td>
+            <td>aaaaaaaaaaaaa</td>
+            <td>
+                <a href="#">修改</a>|
+                <a href="#">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="checkone" />
+            </td>
+            <td>2</td>
+            <td>母婴</td>
+            <td>奶粉、尿不湿</td>
+            <td>bbbbbbbbbbb</td>
+            <td>
+                <a href="#">修改</a>|
+                <a href="#">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="checkone" />
+            </td>
+            <td>3</td>
+            <td>电脑办公</td>
+            <td>联想、戴尔</td>
+            <td>cccccccccc</td>
+            <td>
+                <a href="#">修改</a>|
+                <a href="#">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="checkone" />
+            </td>
+            <td>4</td>
+            <td>零食小吃</td>
+            <td>辣条、薯片</td>
+            <td>ddddddddddd</td>
+            <td>
+                <a href="#">修改</a>|
+                <a href="#">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="checkone" />
+            </td>
+            <td>5</td>
+            <td>床上用品</td>
+            <td>床单、被套</td>
+            <td>eeeeeeeeeee</td>
+            <td>
+                <a href="#">修改</a>|
+                <a href="#">删除</a>
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+</html>
