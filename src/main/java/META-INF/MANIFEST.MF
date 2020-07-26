@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: org.network.socket.Demo4_GUIChat
+Main-Class: org.basis.network.socket.Demo4_GUIChat
 
