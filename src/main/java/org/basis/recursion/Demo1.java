@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Demo1 {
   public static void main(String[] args) throws IOException {
-    //demo1();
+    demo1();
     File dir = getDir();
     System.out.println(getFileLength(dir));
   }
