@@ -18,7 +18,7 @@ public class JDBCUtil {
             Properties properties = new Properties();
 //            InputStream is = new FileInputStream("src/main/jdbc.properties");
             //配置文件需要放在源文件夹路径下
-            InputStream is = JDBCUtil.class.getClassLoader().getResourceAsStream("jdbc.properties");
+            InputStream is = JDBCUtil.class.getClassLoader().getResourceAsStream("src//jdbc.properties");
 
             properties.load(is);
 

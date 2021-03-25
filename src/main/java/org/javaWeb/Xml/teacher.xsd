@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.org/teacher"
+        elementFormDefault="qualified">
+    <element name="teachers">
+        <complexType>
+            <sequence maxOccurs="unbounded">
+                <!--    复杂元素-->
+                <element name="teacher">
+                    <!--        用于声明这个teacher元素是复杂元素-->
+                    <complexType>
+                        <sequence>
+                            <!--   以下为简单元素-->
+                            <element name="name" type="string"></element>
+                            <element name="age" type="int"></element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+</schema>

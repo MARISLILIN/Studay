@@ -16,7 +16,7 @@ public class Demo4_Field {
 //      f.set(p,"李四");
       //报错:
       // IllegalAccessException:
-      // Class org.basis.reflection.reflect.Demo4_Field can not access a member of class org.basis.reflection.bean.Person with modifiers "private"
+      // Class org.basis.reflection.reflect.Demo4_Field can not access a member of class org.basis.reflection.stu.bean.Person with modifiers "private"
       Field f = clazz.getDeclaredField("name");
       //去除私有的权限
       f.setAccessible(true);

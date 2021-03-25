@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+          http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+  <display-name>Archetype Created Web Application</display-name>
+
+<!--stu-->
+  <servlet>
+    <servlet-name>StudentListServlet</servlet-name>
+    <servlet-class>stu.servlet.StudentListServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>StudentListServlet</servlet-name>
+    <url-pattern>/StudentListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StudentListPageServlet</servlet-name>
+    <servlet-class>stu.servlet.StudentListPageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>StudentListPageServlet</servlet-name>
+    <url-pattern>/StudentListPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>stu.servlet.AddServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/AddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>stu.servlet.DeleteServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EditServlet</servlet-name>
+    <servlet-class>stu.servlet.EditServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>EditServlet</servlet-name>
+    <url-pattern>/EditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>stu.servlet.UpdateServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SearchStudentServlet</servlet-name>
+    <servlet-class>stu.servlet.SearchStudentServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SearchStudentServlet</servlet-name>
+    <url-pattern>/SearchStudentServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+
+  <!--ajaxAndjquery-->
+  <servlet>
+    <servlet-name>DemoServlet01</servlet-name>
+    <servlet-class>ajaxAndjquery.servlet.DemoServlet01</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DemoServlet01</servlet-name>
+    <url-pattern>/DemoServlet01</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CheckUserNameServlet</servlet-name>
+    <servlet-class>ajaxAndjquery.servlet.CheckUserNameServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CheckUserNameServlet</servlet-name>
+    <url-pattern>/CheckUserNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DemoServlet02</servlet-name>
+    <servlet-class>ajaxAndjquery.servlet.DemoServlet02</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DemoServlet02</servlet-name>
+    <url-pattern>/DemoServlet02</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FindWordsServlet</servlet-name>
+    <servlet-class>ajaxAndjquery.servlet.FindWordsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FindWordsServlet</servlet-name>
+    <url-pattern>/FindWordsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CityServlet</servlet-name>
+    <servlet-class>ajaxAndjquery.servlet.CityServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CityServlet</servlet-name>
+    <url-pattern>/CityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CityServlet02</servlet-name>
+    <servlet-class>ajaxAndjquery.servlet.CityServlet02</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CityServlet02</servlet-name>
+    <url-pattern>/CityServlet02</url-pattern>
+  </servlet-mapping>
+</web-app>

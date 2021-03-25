@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--引入dtd来约束xml-->
+<!--文档类型 根标签名字   网络上的dtd  dtd的名称  的态度的路径-->
+<!--<!DOCTYPE stus PUBLIC "//UNKNOWN/" "unknown.dtd">-->
+
+<!--引入本地的dtd  根标签   本地dtd  dtd的位置-->
+<!DOCTYPE stus SYSTEM "demo.dtd">
+
+<!--xml文档里直接嵌入dtd约束法则-->
+<!--<!DOCTYPE stus [-->
+<!--        <!ELEMENT stus (stu)>-->
+<!--        <!ELEMENT stu (name,age)>-->
+<!--        <!ELEMENT name (#PCDATA)>-->
+<!--        <!ELEMENT age (#PCDATA)>-->
+<!--]>-->
+
+<!--注释-->
+<stus>
+    <stu id="10086">
+        <name>张三</name>
+        <age>18</age>
+    </stu>
+    <stu id="10087">
+        <name>张三</name>
+        <age>18</age>
+    </stu>
+
+</stus>
