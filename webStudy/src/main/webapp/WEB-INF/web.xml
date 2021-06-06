@@ -133,4 +133,31 @@
     <servlet-name>CityServlet02</servlet-name>
     <url-pattern>/CityServlet02</url-pattern>
   </servlet-mapping>
+
+
+  <!--Listener&Filter-->
+<!--  <listener>
+    <listener-class>ListenerAndFilter.ListenerDemo.listener.MyServletContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>ListenerAndFilter.ListenerDemo.listener.MyRequestListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>ListenerAndFilter.ListenerDemo.listener.MySessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>ListenerAndFilter.ListenerDemo.listener02.MyHttpSession02</listener-class>
+  </listener>-->
+
+
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>ListenerAndFilter.ListenerDemo.servlet.TestServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>
